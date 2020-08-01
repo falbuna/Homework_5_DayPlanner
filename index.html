@@ -27,15 +27,37 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 time-block"></div>
-        <div class="col-md-7 description"></div>
+    <div class="container" id="main-planner">
+      <div class="row time-block">
+        <div class="col-md-3 hour">9AM</div>
+        <div class="input-group col-md-8">
+            <input type='text' class='past' style="width: 100%" />
+        </div>
         <div class="col-md-1 saveBtn"></div>
       </div>
+
+      <div class="row time-block">
+        <div class="col-md-3 hour">10AM</div>
+        <div class="input-group col-md-8">
+          <input type="text" class="present" style="width: 100%" />
+        </div>
+        <div class="col-md-1 saveBtn"></div>
+      </div>
+
+      <div class="row time-block">
+        <div class="col-md-3 hour">11AM</div>
+        <div class="input-group col-md-8">
+          <input type="text" class="future" style="width: 100%" />
+        </div>
+        <div class="col-md-1 saveBtn"></div>
+      </div>
+
+    
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src='./script.js'></script>
   </body>
 </html>
