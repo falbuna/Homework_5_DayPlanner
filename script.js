@@ -28,16 +28,17 @@ hours.forEach(function (hour){
 
     const inputDiv = $('<textarea>');
     if ( hour < nowTime){
-        inputDiv.addClass('col-md-8 past');}
+        inputDiv.addClass('col-md-8 description past');}
     else if ( hour > nowTime){
-        inputDiv.addClass('col-md-8 future');
+        inputDiv.addClass('col-md-8 description future');
     }
     else {
-        inputDiv.addClass('col-md-8 present');}
+        inputDiv.addClass('col-md-8 description present');}
     
     rowDiv.append(inputDiv)
 
     const saveBtnDiv = $('<button>');
+    saveBtnDiv.attr('class', 'fa fa-save');
     saveBtnDiv.addClass('col-md-1 saveBtn');
 
     rowDiv.append(saveBtnDiv);
