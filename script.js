@@ -53,17 +53,18 @@ hours.forEach(function (hour){
  
     container.append(rowDiv);
 
-
     $('.saveBtn').on('click', function(event){
         event.preventDefault();
         console.log("I've been clicked!");
     
-        var Stuff = $('.plannerText').val().trim();
+        var Stuff = $('.plannerText').val();
     
         localStorage.setItem('plannerStorage', JSON.stringify(Stuff));
         console.log(localStorage)
     });
+
 })
+
 
 
     // $('.saveBtn').on('click', function(){
