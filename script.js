@@ -32,18 +32,20 @@ hours.forEach(function (hour){
     hourDiv.addClass('col-3 hour');
 
     rowDiv.append(hourDiv);
-    // This will create the input container that will hold the text area.
+
+    // This will create the input container that will hold the textarea for the input.
     const inputDiv = $('<textarea>');
-    inputDiv.attr('class', 'plannerText')
+    inputDiv.attr('id', 'plannerText');
     if ( hour < nowTime){
-        inputDiv.addClass('col-8 description past');}
+        inputDiv.addClass('col-8 past');}
     else if ( hour > nowTime){
-        inputDiv.addClass('col-8 description future');
+        inputDiv.addClass('col-8 future');
     }
     else {
-        inputDiv.addClass('col-8 description present');}
+        inputDiv.addClass('col-8 present');}
     
     rowDiv.append(inputDiv)
+
     // This will create the save button for each of the hour blocks.
     var saveBtnDiv = $('<button>');
     saveBtnDiv.attr('class', 'fa fa-save');
@@ -53,27 +55,22 @@ hours.forEach(function (hour){
  
     container.append(rowDiv);
 
-    $('.saveBtn').on('click', function(event){
-        event.preventDefault();
-        console.log("I've been clicked!");
-    
-        var Stuff = $('.plannerText').val();
-    
-        localStorage.setItem('plannerStorage', JSON.stringify(Stuff));
-        console.log(localStorage)
-    });
-
 })
 
+var inputText = document.querySelector('#testPlanner');
 
+$('.saveText').on('click', function(event){
+    event.preventDefault();
 
-    // $('.saveBtn').on('click', function(){
-    //     event.preventDefault();
-    //     console.log("I've been clicked!");
+    var newText = inputText.value.trim();
+    console.log(newText);
 
-    //     var Stuff = document.querySelector('#plannerText').value;
-    
-    //     localStorage.setItem('plannerStuff', Stuff);
-    //     console.log(localStorage)
+    const Stuff = $('<textarea>');
 
-    // })
+    Stuff.text($(newText));
+    console.log(Stuff)
+
+    localStorage.setItem('plannerStorage', JSON.stringify(newText));
+    console.log(localStorage)
+
+});
