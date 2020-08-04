@@ -34,7 +34,7 @@ hours.forEach(function (hour){
     rowDiv.append(hourDiv);
 
     // This will create the input container that will hold the textarea for the input.
-    const inputDiv = $('<textarea>');
+    const inputDiv = $('<input>');
     inputDiv.attr('id', 'plannerText');
     if ( hour < nowTime){
         inputDiv.addClass('col-8 past');}
@@ -57,20 +57,16 @@ hours.forEach(function (hour){
 
 })
 
-var inputText = document.querySelector('#testPlanner');
+var $inputText = $('input:text');
 
-$('.saveText').on('click', function(event){
+
+$('.testsavebtn').on('click', function(event){
     event.preventDefault();
 
-    var newText = inputText.value.trim();
+    var newText = $inputText.val();
     console.log(newText);
 
-    const Stuff = $('<textarea>');
-
-    Stuff.text($(newText));
-    console.log(Stuff)
-
     localStorage.setItem('plannerStorage', JSON.stringify(newText));
-    console.log(localStorage)
+    console.log(localStorage);
 
 });
