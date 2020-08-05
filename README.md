@@ -16,7 +16,7 @@ When the user first enters the webpage, this is what they will see.
 The user can input text into the time blocks for the given hour.
 
 The timeblocks will change color depending on if the hour is in the past, present or future.
-![Added text and color changing depending on the hour of the day.](https://github.com/falbuna/Homework_5_DayPlanner/tree/master/MiddleOfDay.PNG)
+![Added text and color changing depending on the hour of the day.](https://github.com/falbuna/Homework_5_DayPlanner/blob/master/Assets/MiddleOfDay.PNG)
 
 The user can hit save and save the changes made to the planner.
 
