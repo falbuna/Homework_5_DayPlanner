@@ -35,7 +35,7 @@ hours.forEach(function (hour){
 
     // This will create the input container that will hold the textarea for the input.
     const inputDiv = $('<input>');
-    inputDiv.attr('id', 'plannerText');
+    inputDiv.attr('id', 'plannerText' + hour);
     if ( hour < nowTime){
         inputDiv.addClass('col-8 past');}
     else if ( hour > nowTime){
@@ -49,6 +49,7 @@ hours.forEach(function (hour){
     // This will create the save button for each of the hour blocks.
     var saveBtnDiv = $('<button>');
     saveBtnDiv.attr('class', 'fa fa-save');
+    saveBtnDiv.attr('value', hour)
     saveBtnDiv.addClass('col-1 saveBtn');
 
     rowDiv.append(saveBtnDiv);
@@ -57,16 +58,20 @@ hours.forEach(function (hour){
 
 })
 
-var $inputText = $('input:text');
 
 
-$('.testsavebtn').on('click', function(event){
+$('.saveBtn').on('click', function(event){
     event.preventDefault();
+    const $inputText = $(this).val();
+    const newText = $('#plannerText' + $inputText).val();
 
-    var newText = $inputText.val();
-    console.log(newText);
-
-    localStorage.setItem('plannerStorage', JSON.stringify(newText));
-    console.log(localStorage);
-
+    localStorage.setItem('#plannerText' + $inputText, JSON.stringify(newText));
+    console.log(localStorage)
 });
+
+var keys = Object.entries(localStorage);
+console.log(keys);
+keys.forEach(function(key){
+    console.log(key)
+    $(key[0]).val(key[1]);
+})
