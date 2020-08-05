@@ -53,25 +53,24 @@ hours.forEach(function (hour){
     saveBtnDiv.addClass('col-1 saveBtn');
 
     rowDiv.append(saveBtnDiv);
- 
+    
+    // The main planner container will get appended with the new hour block row.
     container.append(rowDiv);
 
 })
 
 
-
+// This is the click event that will save the Input Text into local storage.
 $('.saveBtn').on('click', function(event){
     event.preventDefault();
     const $inputText = $(this).val();
     const newText = $('#plannerText' + $inputText).val();
-
+    // This will save the new text input into local storage as #plannerText.
     localStorage.setItem('#plannerText' + $inputText, JSON.stringify(newText));
-    console.log(localStorage)
 });
 
-var keys = Object.entries(localStorage);
-console.log(keys);
-keys.forEach(function(key){
-    console.log(key)
+// Will pull the saved entries from local storage 
+var storedText = Object.entries(localStorage);
+storedText.forEach(function(key){
     $(key[0]).val(key[1]);
 })
