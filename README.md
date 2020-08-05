@@ -11,15 +11,17 @@ My motivation for taking on this project was to test my knowledge and skills on 
 ## Usage
 
 When the user first enters the webpage, this is what they will see.
-![Start of the Day with Green Hour Blocks and No Text](https://github.com/falbuna/Homework_5_DayPlanner/blob/master/assets/StartOfDay.PNG)
+![Start of the Day with Green Hour Blocks and No Text](https://github.com/falbuna/Homework_5_DayPlanner/tree/master/assets/StartOfDay.PNG)
+
 The user can input text into the time blocks for the given hour.
 
 The timeblocks will change color depending on if the hour is in the past, present or future.
+![Added text and color changing depending on the hour of the day.](https://github.com/falbuna/Homework_5_DayPlanner/tree/master/MiddleOfDay.PNG)
 
 The user can hit save and save the changes made to the planner.
 
 When the user refreshes, the changes will save.
-
+![End of Day with All hours in gray.](https://github.com/falbuna/Homework_5_DayPlanner/tree/master/EndOfDay.PNG)
 
 ## How I Coded the App
 
