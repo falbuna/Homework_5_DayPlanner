@@ -22,7 +22,7 @@ The user can hit save and save the changes made to the planner.
 
 ![End of Day with All hours in gray.](https://github.com/falbuna/Homework_5_DayPlanner/blob/master/Assets/EndOfDay.PNG)
 
-When the user refreshes, the changes will save.
+When the user refreshes, the text from previous entries will stay on the page. As the day goes on, the hour blocks will all turn gray.
 
 
 ## How I Coded the App
@@ -31,4 +31,4 @@ The aesthetics for the web page application was already preset for me. I used a 
 
 ## Acknowledgements
 
-I wanted to thank my Instructor Chris Stead for helping me get the hour rows created and Steven Landgraf for helping me when I was stuck on saving and pulling from local storage.
+I wanted to thank my Instructor Chris Stead for helping me get the hour rows created and the TA Steven Landgraf for helping me when I was stuck on saving and pulling from local storage to get the text to stay on the page after the page was refreshed.
